@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+  <a class="navbar-brand" href="#">AWNIS</a>
+  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="awnisTopNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse ml-auto" id="awnisTopNavbar">
+      <span class="mr-auto"></span>
+      <span class="mr-auto"></span>    
+     <ul class="navbar-nav mr-auto">
+      <li>
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">(951) 796-8551</button>
+          <!-- <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+      </li>
+    </ul> 
+    <span class="mr-auto"></span>  
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Services</a>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <a [ngx-scroll-to]="'#netinstall'" class="dropdown-item">Network Installation</a>
+          <a [ngx-scroll-to]="'#netmaintenance'" class="dropdown-item">Network Maintenance</a>
+          <a [ngx-scroll-to]="'#telcom'" class="dropdown-item">Telecommunications</a>
+          <a [ngx-scroll-to]="'#data'" class="dropdown-item">Data</a>
+          <a [ngx-scroll-to]="'#cctv'" class="dropdown-item">CCTV Surveillance</a>
+          <a [ngx-scroll-to]="'#admin'" class="dropdown-item">Adminstration</a>
+          <a [ngx-scroll-to]="'#webdev'" class="dropdown-item">Web Development</a>
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
